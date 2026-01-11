@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderDetailsTab</class>
+ <widget class="QWidget" name="OrderDetailsTab">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="header_layout">
+     <item>
+      <widget class="QPushButton" name="btn_back_to_orders">
+       <property name="text"><string>&lt; Back</string></property>
+       <property name="maximumWidth"><number>100</number></property>
+       <property name="minimumHeight"><number>30</number></property>
+      </widget>
+     </item>
+     <item><spacer name="spacer_left"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item>
+      <widget class="QLabel" name="lbl_order_name_header">
+       <property name="font"><font><pointSize>16</pointSize><bold>true</bold></font></property>
+       <property name="text"><string>Order Name</string></property>
+       <property name="alignment"><set>Qt::AlignCenter</set></property>
+      </widget>
+     </item>
+     <item><spacer name="spacer_right"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item><widget class="QWidget" name="dummy_balance"><property name="maximumWidth"><number>100</number></property></widget></item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_order_items">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QHeaderView::section { border: 1px solid #6c6c6c; }</string>
+     </property>
+     <attribute name="verticalHeaderVisible"><bool>false</bool></attribute>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <column><property name="text"><string>Item Name</string></property></column>
+     <column><property name="text"><string>Quantity</string></property></column>
+     <column><property name="text"><string>Unit Price</string></property></column>
+     <column><property name="text"><string>Subtotal</string></property></column>
+     <column><property name="text"><string>Actions</string></property></column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="footer_widget" native="true">
+     <layout class="QVBoxLayout" name="footer_layout">
+      <property name="spacing"><number>10</number></property>
+      <item>
+       <widget class="QLabel" name="lbl_order_total_footer">
+        <property name="font"><font><pointSize>18</pointSize><bold>true</bold></font></property>
+        <property name="text"><string>Total: $0.00</string></property>
+        <property name="alignment"><set>Qt::AlignCenter</set></property>
+        <property name="styleSheet"><string>color: #2e7d32;</string></property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="actions_layout">
+        <item>
+         <widget class="QPushButton" name="btn_refresh">
+          <property name="text"><string>Refresh</string></property>
+          <property name="minimumHeight"><number>45</number></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_add_item_to_order">
+          <property name="text"><string>Add Item</string></property>
+          <property name="minimumHeight"><number>45</number></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_delete_order">
+          <property name="text"><string>Delete Order</string></property>
+          <property name="minimumHeight"><number>45</number></property>
+          <property name="styleSheet"><string>color: red;</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_pay_order">
+          <property name="text"><string>Pay / Close</string></property>
+          <property name="minimumHeight"><number>45</number></property>
+          <property name="styleSheet"><string>font-weight: bold;</string></property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

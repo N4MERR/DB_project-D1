@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShiftsCalendarTab</class>
+ <widget class="QWidget" name="ShiftsCalendarTab">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QCalendarWidget" name="calendar_shifts">
+     <property name="gridVisible"><bool>true</bool></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_shift_hint">
+     <property name="text"><string>Select a date to view or manage shifts.</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+     <property name="font"><font><italic>true</italic></font></property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
